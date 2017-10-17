@@ -21,7 +21,6 @@ def login():
     driver.get('https://csg-web1.eservices.virginia.edu/login/index.php')
 
     #click navigates browser to netbadge
-    print(driver.page_source)
     driver.find_elements_by_tag_name('a')[3].click()
 
     usern = driver.find_element_by_name('user')

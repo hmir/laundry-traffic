@@ -1,6 +1,7 @@
 import time
 import pprint
 
+from pyvirtualdisplay import Display
 from datetime import datetime
 
 from selenium import webdriver
@@ -8,8 +9,8 @@ from selenium.webdriver.common.keys import Keys
 
 import json
 
-driver = webdriver.Chrome()
-
+driver = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
+driver.set_window_size(1120, 550)
 def login():
     #read in username and password from credentials.txt
     credentialsFile = open('credentials.txt', 'r')
@@ -20,6 +21,7 @@ def login():
     driver.get('https://csg-web1.eservices.virginia.edu/login/index.php')
 
     #click navigates browser to netbadge
+    print(driver.page_source)
     driver.find_elements_by_tag_name('a')[3].click()
 
     usern = driver.find_element_by_name('user')

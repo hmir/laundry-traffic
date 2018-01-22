@@ -1,0 +1,186 @@
+1516595837053	geckodriver	INFO	geckodriver 0.19.0
+1516595837153	geckodriver	INFO	Listening on 127.0.0.1:57157
+1516595838776	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/kt/p69dcjts48l4lwl_bgnc3ptr0000gn/T/rust_mozprofile.3C3V4uCPSe8k"
+1516595839866	Marionette	INFO	Enabled via --marionette
+2018-01-21 23:37:21.292 plugin-container[35265:11049607] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x783f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1516595842078	Marionette	INFO	Listening on port 57180
+1516595842099	Marionette	WARN	TLS certificate errors will be ignored for this session
+1516595842897	Marionette	DEBUG	Register listener.js for window 2147483649
+1516595842999	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1516595843250	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1516595843250	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1516595843358	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595843427	Marionette	DEBUG	Received DOM event "pageshow" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595843484	Marionette	DEBUG	Received DOM event "beforeunload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595843620	Marionette	DEBUG	Received DOM event "pagehide" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595843621	Marionette	DEBUG	Received DOM event "unload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595843661	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595843671	Marionette	DEBUG	Received DOM event "pageshow" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595843826	Marionette	DEBUG	Received DOM event "beforeunload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595844071	Marionette	DEBUG	Received DOM event "pagehide" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595844072	Marionette	DEBUG	Received DOM event "unload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595844086	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"
+1516595844101	Marionette	DEBUG	Received DOM event "pageshow" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"
+console.warn: LoginRecipes: getRecipes: falling back to a synchronous message for: https://netbadge.virginia.edu
+console.warn: nsLoginManager: searchLogins: `formSubmitURL` or `httpRealm` is recommended
+2018-01-21 23:37:51.389 plugin-container[35275:11050513] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7d3f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x2400A8,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1516595893697	geckodriver	INFO	geckodriver 0.19.0
+1516595893854	geckodriver	INFO	Listening on 127.0.0.1:57523
+1516595894918	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/kt/p69dcjts48l4lwl_bgnc3ptr0000gn/T/rust_mozprofile.vapc0LFDaEPV"
+1516595895819	Marionette	INFO	Enabled via --marionette
+2018-01-21 23:38:17.146 plugin-container[35300:11051446] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8303, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1516595897595	Marionette	INFO	Listening on port 57536
+1516595897692	Marionette	WARN	TLS certificate errors will be ignored for this session
+1516595897779	Marionette	DEBUG	Register listener.js for window 2147483649
+1516595897999	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1516595898285	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1516595898285	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1516595898513	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595898523	Marionette	DEBUG	Received DOM event "pageshow" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595898642	Marionette	DEBUG	Received DOM event "beforeunload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595898986	Marionette	DEBUG	Received DOM event "pagehide" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595898986	Marionette	DEBUG	Received DOM event "unload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595899000	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"
+1516595899015	Marionette	DEBUG	Received DOM event "pageshow" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+2018-01-21 23:38:30.659 plugin-container[35302:11051832] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x7e43, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1516595923857	geckodriver	INFO	geckodriver 0.19.0
+1516595923938	geckodriver	INFO	Listening on 127.0.0.1:57753
+1516595924974	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/kt/p69dcjts48l4lwl_bgnc3ptr0000gn/T/rust_mozprofile.QANs6ioa44qo"
+1516595925553	Marionette	INFO	Enabled via --marionette
+2018-01-21 23:38:46.672 plugin-container[35319:11052292] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x8207, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1516595927235	Marionette	INFO	Listening on port 57766
+1516595927296	Marionette	WARN	TLS certificate errors will be ignored for this session
+1516595927378	Marionette	DEBUG	Register listener.js for window 2147483649
+1516595927563	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1516595927833	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1516595927834	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1516595927974	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595928102	Marionette	DEBUG	Received DOM event "pageshow" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595928223	Marionette	DEBUG	Received DOM event "beforeunload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595928476	Marionette	DEBUG	Received DOM event "pagehide" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595928476	Marionette	DEBUG	Received DOM event "unload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516595928485	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"
+1516595928500	Marionette	DEBUG	Received DOM event "pageshow" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"
+2018-01-21 23:38:51.573 plugin-container[35323:11052432] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x813f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1516596079397	geckodriver	INFO	geckodriver 0.19.0
+1516596079484	geckodriver	INFO	Listening on 127.0.0.1:58625
+1516596080580	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-profile" "/var/folders/kt/p69dcjts48l4lwl_bgnc3ptr0000gn/T/rust_mozprofile.txbU1LbDsfih"
+1516596081558	Marionette	INFO	Enabled via --marionette
+2018-01-21 23:41:23.546 plugin-container[35401:11057017] *** CFMessagePort: bootstrap_register(): failed 1100 (0x44c) 'Permission denied', port = 0x793f, name = 'com.apple.tsm.portname'
+See /usr/include/servers/bootstrap_defs.h for the error codes.
+1516596084912	Marionette	INFO	Listening on port 58638
+1516596084950	Marionette	WARN	TLS certificate errors will be ignored for this session
+1516596085048	Marionette	DEBUG	Register listener.js for window 2147483649
+1516596085403	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1516596085748	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1516596085748	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1516596085924	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086115	Marionette	DEBUG	Received DOM event "pageshow" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086171	Marionette	DEBUG	Received DOM event "beforeunload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086307	Marionette	DEBUG	Received DOM event "pagehide" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086307	Marionette	DEBUG	Received DOM event "unload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086393	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086415	Marionette	DEBUG	Received DOM event "pageshow" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086567	Marionette	DEBUG	Received DOM event "beforeunload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086842	Marionette	DEBUG	Received DOM event "pagehide" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086843	Marionette	DEBUG	Received DOM event "unload" for "https://csg-web1.eservices.virginia.edu/login/index.php"
+1516596086868	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"
+1516596086888	Marionette	DEBUG	Received DOM event "pageshow" for "https://shibidp.its.virginia.edu/idp/Authn/RemoteUser?conversation=e1s1"

@@ -8,6 +8,9 @@ from selenium.webdriver.common.keys import Keys
 
 import json
 
+days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+dorms = ['Balz-Dobie', 'East Lawn', 'Lile-Maupin', 'Bice House', 'Faulkner Apartments', 'Metcalf', 'Brown College', 'French House', 'Munford', 'Cauthen', 'Gibbons House', 'Shannon House', 'Copeley Bldg 829', 'Gooch', 'Shea House', 'Copeley Bldg 833', 'Gwathmey', 'Spanish House', 'Copeley Bldg 836', 'Hereford College (Runk)', 'Tuttle-Dunnington', 'Copeley Bldg 839', 'Kellogg', 'Watson-Webb', 'Dabney', 'Lambeth', 'Dillard', 'Lewis']
+
 driver = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
 driver.set_window_size(1120, 550)
 def login():
@@ -90,15 +93,22 @@ checkedThisMinute = False
 globalDict = {}
 while True:
     if datetime.now().minute % 5 == 0 and not checkedThisMinute:
-        if str(datetime.now().month) + '-' + str(datetime.now().day) not in globalDict:
-            globalDict[str(datetime.now())[5:10]] = {}
-        globalDict[str(datetime.now())[5:10]][str(datetime.now())[11:16]] = getLaundryData()
+        newData = getLaundryData()
+        for dorm in dorms:
+            if dorm not in globalDict:
+                globalDict[dorm] = {}
+            globalDict[dorm][str(datetime.now())[11:16]] = newData[dorm]
+        # if str(datetime.now().month) + '-' + str(datetime.now().day) not in globalDict:
+        #     globalDict[str(datetime.now())[5:10]] = {}
+        # globalDict[str(datetime.now())[5:10]][str(datetime.now())[11:16]] = getLaundryData()
         checkedThisMinute = True
     elif datetime.now().hour == 23 and datetime.now().minute == 59:
         globalDict = {}
         time.sleep(1)
     elif datetime.now().minute % 5 != 0 and checkedThisMinute:
         checkedThisMinute = False
-        writeToOutput(str(datetime.now())[5:10] + '.json', json.dumps(globalDict))
+        weekday = days[datetime.today().weekday()]
+        for dorm in dorms:
+            writeToOutput('data/' + str(dorm) + weekday + str(datetime.now())[:10] + '.json', json.dumps(globalDict))
 
     time.sleep(1)

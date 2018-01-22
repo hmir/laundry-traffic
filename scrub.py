@@ -1,7 +1,6 @@
 import time
 import pprint
 
-from pyvirtualdisplay import Display
 from datetime import datetime
 
 from selenium import webdriver

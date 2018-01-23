@@ -8,15 +8,18 @@ import json
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 dcap = dict(DesiredCapabilities.PHANTOMJS)
 
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 dorms = ['Balz-Dobie', 'East Lawn', 'Lile-Maupin', 'Bice House', 'Faulkner Apartments', 'Metcalf', 'Brown College', 'French House', 'Munford', 'Cauthen', 'Gibbons House', 'Shannon House', 'Copeley Bldg 829', 'Gooch', 'Shea House', 'Copeley Bldg 833', 'Gwathmey', 'Spanish House', 'Copeley Bldg 836', 'Hereford College (Runk)', 'Tuttle-Dunnington', 'Copeley Bldg 839', 'Kellogg', 'Watson-Webb', 'Dabney', 'Lambeth', 'Dillard', 'Lewis']
 
-# driver = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
-driver = webdriver.PhantomJS(desired_capabilities=dcap, service_args=['--ignore-ssl-errors=true'])
+driver = webdriver.PhantomJS(desired_capabilities=dcap, service_args=['--ssl-protocol=any','--ignore-ssl-errors=true'])
 driver.set_window_size(1120, 550)
+
 def login():
     #read in username and password from credentials.txt
     credentialsFile = open('credentials.txt', 'r')
@@ -25,6 +28,7 @@ def login():
         credentials.append(i[9:].strip())
 
     driver.get('https://csg-web1.eservices.virginia.edu/login/index.php')
+    wait = WebDriverWait(driver, 10)
 
     #click navigates browser to netbadge
     driver.find_elements_by_tag_name('a')[3].click()
@@ -102,9 +106,6 @@ while True:
             if dorm not in globalDict:
                 globalDict[dorm] = {}
             globalDict[dorm][str(datetime.now())[11:16]] = newData[dorm]
-        # if str(datetime.now().month) + '-' + str(datetime.now().day) not in globalDict:
-        #     globalDict[str(datetime.now())[5:10]] = {}
-        # globalDict[str(datetime.now())[5:10]][str(datetime.now())[11:16]] = getLaundryData()
         checkedThisMinute = True
     elif datetime.now().hour == 23 and datetime.now().minute == 59:
         globalDict = {}
@@ -113,6 +114,6 @@ while True:
         checkedThisMinute = False
         weekday = days[datetime.today().weekday()]
         for dorm in dorms:
-            writeToOutput('data/' + str(dorm) + weekday + str(datetime.now())[:10] + '.json', json.dumps(globalDict))
+            writeToOutput('data/' + str(dorm) + '/' +  weekday + '/' +  str(datetime.now())[:10] + '.json', json.dumps(globalDict))
 
     time.sleep(1)

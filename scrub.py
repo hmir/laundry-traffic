@@ -59,7 +59,7 @@ def getLaundryData():
         if sleepCount > 10:
             login()
             sleepCount = 0
-            login += 1
+            loginCount += 1
         time.sleep(1)
         sleepCount += 1
         rows = driver.find_elements_by_class_name('row1') + driver.find_elements_by_class_name('row2')
@@ -99,13 +99,21 @@ login()
 
 checkedThisMinute = False
 globalDict = {}
+lastUpdatedTime = None
+lastUpdatedDay = None
+
 while True:
     if datetime.now().minute % 5 == 0 and not checkedThisMinute:
+        lastUpdatedTime = str(datetime.now())[11:16]
+        lastUpdatedDay = str(datetime.now())[:10]
         newData = getLaundryData()
         for dorm in dorms:
             if dorm not in globalDict:
                 globalDict[dorm] = {}
-            globalDict[dorm][str(datetime.now())[11:16]] = newData[dorm]
+            try:
+                globalDict[dorm][str(datetime.now())[11:16]] = newData[dorm]
+            except Exception:
+                print (newData[dorm])
         checkedThisMinute = True
     elif datetime.now().hour == 23 and datetime.now().minute == 59:
         globalDict = {}
@@ -114,6 +122,6 @@ while True:
         checkedThisMinute = False
         weekday = days[datetime.today().weekday()]
         for dorm in dorms:
-            writeToOutput('data/' + str(dorm) + '/' +  weekday + '/' +  str(datetime.now())[:10] + '.json', json.dumps(globalDict))
+            writeToOutput('data/' + dorm + '/' +  weekday + '/' +  lastUpdatedDay + '.json', json.dumps(globalDict[dorm]))
 
     time.sleep(1)

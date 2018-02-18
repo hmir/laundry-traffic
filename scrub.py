@@ -15,8 +15,9 @@ from selenium.webdriver.support import expected_conditions as EC
 dcap = dict(DesiredCapabilities.PHANTOMJS)
 
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-dorms = ['Balz-Dobie', 'East Lawn', 'Lile-Maupin', 'Bice House', 'Faulkner Apartments', 'Metcalf', 'Brown College', 'French House', 'Munford', 'Cauthen', 'Gibbons House', 'Shannon House', 'Copeley Bldg 829', 'Gooch', 'Shea House', 'Copeley Bldg 833', 'Gwathmey', 'Spanish House', 'Copeley Bldg 836', 'Hereford College (Runk)', 'Tuttle-Dunnington', 'Copeley Bldg 839', 'Kellogg', 'Watson-Webb', 'Dabney', 'Lambeth', 'Dillard', 'Lewis']
+dorms = [i.strip() for i in open('facilities.txt', 'r')]
 
+print(dorms)
 driver = webdriver.PhantomJS(desired_capabilities=dcap, service_args=['--ssl-protocol=any','--ignore-ssl-errors=true'])
 driver.set_window_size(1120, 550)
 

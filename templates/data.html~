@@ -1,9 +1,0 @@
-<html>
-  <head>
-    <script>
-      x = {{data|safe}}
-      console.log(x)
-    </script>
-
-  </head>
-</html>

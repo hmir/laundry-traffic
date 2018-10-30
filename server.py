@@ -57,7 +57,7 @@ def getProcessedData():
         dataRaw = {}
 
     dataRaw = processData(facility, day, machine)
-    return render_template('data.html', data=dataRaw)
+    return render_template('data.html', machineData=dataRaw)
 
 if __name__ == '__main__':
     app.run()

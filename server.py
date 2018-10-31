@@ -1,7 +1,7 @@
 import os
 import json
 from datetime import datetime
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ machines = ['washers', 'dryers']
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    return redirect('/laundry_data?building=Balz-Dobie&day=Monday&machine=washers')
 
 def processData(facility, day, machine):
     currentDate = str(datetime.now())[:10]

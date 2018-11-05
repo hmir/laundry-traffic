@@ -5,8 +5,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   <style>
       * {
@@ -18,9 +20,55 @@
         margin: 0 auto;
         text-align: center;
       }
+
+      .axisBottom line {
+        stroke: #c4c4c4;
+        stroke-width: 1;
+      }
+
+      .axisBottom text {
+        fill: black;
+        font-weight: 200;
+      }
+
+      .axisBottom path {
+        stroke: #c4c4c4;
+        stroke-width: 1;
+      }
+
+      .axisLeft line {
+        stroke: #c4c4c4;
+        stroke-width: 1;
+      }
+
+      .axisLeft text {
+        fill: black;
+        font-weight: 200;
+      }
+
+      .axisLeft path {
+        stroke: #c4c4c4;
+        stroke-width: 1;
+      }
+
   </style>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Laundry@UVA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Features</a>
+        <a class="nav-item nav-link" href="#">Pricing</a>
+        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      </div>
+    </div>
+  </nav>
 
 <script src="//d3js.org/d3.v4.min.js"></script>
 <script>
@@ -43,8 +91,8 @@ rawData = tempRawData
 
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 50, bottom: 50, left: 50},
-    width = 1000 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 700 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
 // set the ranges
 var x = d3.scaleBand()
@@ -109,6 +157,7 @@ svg.selectAll(".bar")
 // add the x Axis
 svg.append("g")
     .attr("transform", "translate(0," + height + ")")
+    .attr("class", "axisBottom")
     .call(d3.axisBottom(x));
 
 // x axis label
@@ -116,11 +165,14 @@ svg.append("text")
     .attr("transform",
           "translate(" + (width/2) + " ," + (height + margin.top + 20) + ")")
     .style("text-anchor", "middle")
-    .style("font-weight", "700")
+    .style("font-weight", "200")
+    .style("font-size", "20")
+    .style("fill", "black")
     .text("Time");
 
 // add the y Axis
 svg.append("g")
+    .attr("class", "axisLeft")
     .call(d3.axisLeft(y));
 
 // y axis label
@@ -130,7 +182,9 @@ svg.append("text")
     .attr("x",0 - (height / 2) - 10)
     .attr("dy", "1em")
     .style("text-anchor", "middle")
-    .style("font-weight", "700")
+    .style("font-weight", "200")
+    .style("font-size", "20")
+    .style("fill", "black")
     .text("Percent Used");
 
 </script>

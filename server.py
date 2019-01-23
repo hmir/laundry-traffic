@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 facilities = {}
 for i in open('facilities.txt'):
-    facilities[i.strip().replace(' ', '')] = i.strip();
+    facilities[i.strip().replace(' ', '')] = i.strip()
     
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 machines = ['washers', 'dryers']
@@ -51,7 +51,6 @@ def getProcessedData():
     facility = request.args.get('building')
     day = request.args.get('day')
     machine = request.args.get('machine')
-    weeks = 8
 
     if facility not in facility or day not in days or machine not in machines:
         dataRaw = {}
